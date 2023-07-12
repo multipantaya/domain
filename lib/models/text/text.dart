@@ -1,0 +1,1 @@
+export 'simple_text_model.dart';
