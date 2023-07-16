@@ -6,6 +6,7 @@ class PlatformModel {
   final String namePlatform;
   final String image;
   final bool favorite;
+  final int totalAmount;
   final List<PlansModel> plans;
 
   PlatformModel({
@@ -13,6 +14,7 @@ class PlatformModel {
     required this.namePlatform, 
     required this.image, 
     required this.favorite,
+    required this.totalAmount,
     required this.plans
   });
 
@@ -21,6 +23,7 @@ class PlatformModel {
     String? namePlatform,
     String? image,
     bool? favorite,
+    int? totalAmount,
     List<PlansModel>? plans,
   }){
     return PlatformModel(
@@ -28,6 +31,7 @@ class PlatformModel {
       namePlatform: namePlatform ?? this.namePlatform, 
       image: image ?? this.image, 
       favorite: favorite ?? this.favorite,
+      totalAmount: totalAmount ?? this.totalAmount,
       plans: plans ?? this.plans
     );
   }
@@ -40,6 +44,7 @@ final dataPlatforms = List.generate(namesPlatform.length, (index) => PlatformMod
   namePlatform: namesPlatform[index], 
   image: '', 
   favorite: false,
+  totalAmount: 1,
   plans: dataPlans
   )
 );
