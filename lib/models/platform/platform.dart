@@ -1,2 +1,2 @@
 export 'plans_model.dart';
-export 'platform_model.dart';
+export 'platforms_model.dart';

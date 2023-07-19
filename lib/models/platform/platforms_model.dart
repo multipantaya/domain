@@ -1,7 +1,7 @@
 
 import 'package:domain/domain.dart';
 
-class PlatformModel {
+class PlatformsModel {
   final String id;
   final String namePlatform;
   final String image;
@@ -9,7 +9,7 @@ class PlatformModel {
   final int totalAmount;
   final List<PlansModel> plans;
 
-  PlatformModel({
+  PlatformsModel({
     required this.id, 
     required this.namePlatform, 
     required this.image, 
@@ -18,7 +18,7 @@ class PlatformModel {
     required this.plans
   });
 
-  PlatformModel copyWith ({
+  PlatformsModel copyWith ({
     String? id,
     String? namePlatform,
     String? image,
@@ -26,7 +26,7 @@ class PlatformModel {
     int? totalAmount,
     List<PlansModel>? plans,
   }){
-    return PlatformModel(
+    return PlatformsModel(
       id: id ?? this.id, 
       namePlatform: namePlatform ?? this.namePlatform, 
       image: image ?? this.image, 
@@ -39,7 +39,7 @@ class PlatformModel {
 
 final List<String> namesPlatform = ['HBO MAX','PRIME VIDEO','DISNEY PLUS','YOUTUBE PREMIUM','SPOTIFY','NETFLIX'];
 
-final dataPlatforms = List.generate(namesPlatform.length, (index) => PlatformModel(
+final dataPlatforms = List.generate(namesPlatform.length, (index) => PlatformsModel(
   id: (index + 1).toString(), 
   namePlatform: namesPlatform[index], 
   image: '', 
