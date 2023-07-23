@@ -1,10 +1,17 @@
 
 import 'package:domain/domain.dart';
+import 'package:hive/hive.dart';
+part 'plans_model.g.dart';
 
+@HiveType(typeId: 4)
 class PlansModel {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String namePlan;
+  @HiveField(2)
   final double price;
+  @HiveField(3)
   final List<SimpleTextModel> description;
 
   PlansModel({
