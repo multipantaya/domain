@@ -52,14 +52,14 @@ class PlatformsModel extends HiveObject {
 }
 
 
-final List<String> namesPlatform = ['HBO MAX','PRIME VIDEO','DISNEY PLUS','YOUTUBE PREMIUM','SPOTIFY','NETFLIX'];
+final List<String> namesPlatform = [/*'HBO MAX','PRIME VIDEO','DISNEY PLUS',*/'NETFLIX','SPOTIFY','YOUTUBE PREMIUM'];
 
 final dataPlatforms = List.generate(namesPlatform.length, (index) => PlatformsModel(
-  id: (index + 1).toString(), 
+  id: (index + 10).toString(), 
   namePlatform: namesPlatform[index], 
   image: '', 
   favorite: false,
   totalAmount: 1,
-  plans: dataPlans
+  plans: index == 0 ? dataPlansNetflix : index == 1 ? dataPlansSpotify : dataPlansSpotify
   )
 );
